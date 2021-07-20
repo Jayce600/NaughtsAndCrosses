@@ -1,0 +1,67 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.outline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    border: 2px solid black;
+}
+
+.box:hover {
+    background-color: mediumpurple;
+    border: 2px solid black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple;
+    height: 20vh;
+}
+
+header h1 {
+    color: mediumpurple;
+    font-family: "Comic Sans MS";
+}
+
+.victory-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: rebeccapurple;
+    font-family: "Comic Sans MS";
+    font-size: 32px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.restart-button {
+    height: 80%;
+    width: 200px;
+    background-color: rebeccapurple;
+    color: mediumpurple;
+    font-family: "Comic Sans MS";
+    font-size: 32px;
+    border-radius: 10px;
+}
