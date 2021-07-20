@@ -29,8 +29,10 @@ function playPiece(e){
     } else {
         console.log("error - playPiece - if else block")
     }
-    checkForWin();
+    if (checkForWin()){}
+	else {
     checkForTie();
+	}
 }
 
 // very repetitive code, this should be improved.
@@ -39,42 +41,51 @@ function checkForWin(){
     if (boxes[0].textContent === "x" && boxes[1].textContent === "x" && boxes[2].textContent === "x" ||
         boxes[0].textContent === "o" && boxes[1].textContent === "o" && boxes[2].textContent === "o"){
         gameOver(boxes[0].textContent);
+	return true;
     }
     // middle row
     if (boxes[3].textContent === "x" && boxes[4].textContent === "x" && boxes[5].textContent === "x" ||
         boxes[3].textContent === "o" && boxes[4].textContent === "o" && boxes[5].textContent === "o"){
         gameOver(boxes[3].textContent);
+	return true;
     }
     // bottom row
     if (boxes[6].textContent === "x" && boxes[7].textContent === "x" && boxes[8].textContent === "x" ||
         boxes[6].textContent === "o" && boxes[7].textContent === "o" && boxes[8].textContent === "o"){
         gameOver(boxes[6].textContent);
+	return true;
     }
     // first column
     if (boxes[0].textContent === "x" && boxes[3].textContent === "x" && boxes[6].textContent === "x" ||
         boxes[0].textContent === "o" && boxes[3].textContent === "o" && boxes[6].textContent === "o"){
         gameOver(boxes[0].textContent);
+	return true;
     }
     // second column
     if (boxes[1].textContent === "x" && boxes[4].textContent === "x" && boxes[7].textContent === "x" ||
         boxes[1].textContent === "o" && boxes[4].textContent === "o" && boxes[7].textContent === "o"){
         gameOver(boxes[1].textContent);
+	return true;
     }
     // third column
     if (boxes[2].textContent === "x" && boxes[5].textContent === "x" && boxes[8].textContent === "x" ||
         boxes[2].textContent === "o" && boxes[5].textContent === "o" && boxes[8].textContent === "o"){
         gameOver(boxes[2].textContent);
+	return true;
     }
     // diagonal \
     if (boxes[0].textContent === "x" && boxes[4].textContent === "x" && boxes[8].textContent === "x" ||
         boxes[0].textContent === "o" && boxes[4].textContent === "o" && boxes[8].textContent === "o"){
         gameOver(boxes[0].textContent);
+	return true;
     }
     // diagonal /
     if (boxes[2].textContent === "x" && boxes[4].textContent === "x" && boxes[6].textContent === "x" ||
         boxes[2].textContent === "o" && boxes[4].textContent === "o" && boxes[6].textContent === "o"){
         gameOver(boxes[2].textContent);
+	return true;
     }
+	return false;
 }
 
 function checkForTie(){
